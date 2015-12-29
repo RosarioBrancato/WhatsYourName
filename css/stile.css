@@ -1,0 +1,21 @@
+body {
+	background: #D9EDF7;
+}
+
+h1, p {
+	text-align: center;
+	font-weight: bold;
+}
+
+input[type="text"] {
+	text-align: center;
+}
+
+.center-absolute {
+	width: 350px;
+	height: 200px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-100px 0 0 -175px;
+}
