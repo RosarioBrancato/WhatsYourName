@@ -16,7 +16,7 @@ if(isset($_GET['name']) && strlen(trim($_GET['name'])) > 0) {
     <meta name="description" content="">
     <meta name="author" content="Rosario Brancato">
 
-    <title>Camera Control</title>
+    <title>What's Your Name?</title>
 
 	<!--Google jQuery csn-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
