@@ -1,7 +1,19 @@
 <?php
 
+if (session_status() == PHP_SESSION_NONE) {
+	session_start();
+}
+
+include_once('db/DbName.php');
+
 if(isset($_GET['name']) && strlen(trim($_GET['name'])) > 0) {
-	$name = $_GET['name'];
+	$name = substr($_GET['name'], 0, 255);
+	
+	if(isset($_GET['send_name'])) {
+		$dbName = new DbName();
+		$dbName->Add($name);
+	}
+	
 } else {
 	header('Location: index.html');
 	die();
@@ -14,7 +26,7 @@ if(isset($_GET['name']) && strlen(trim($_GET['name'])) > 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Rosario Brancato">
+    <meta name="author" content="RB">
 
     <title>What's Your Name?</title>
 
